@@ -39,16 +39,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
- 
+    function petNeedHome(){
+      return petShelter.length > 0;
+    }
   
     // Check if the pet shelter has animals that need homes by calling the previous function
-
-  
-    // Function to calculate the average age of pets in the shelter
+    let petsNeedHomes = petNeedHome();
+    console.log("Pets need Homes");
    
   
-    // Calculate the average age of pets in the shelter by calling the previous function
+    // Function to calculate the average age of pets in the shelter
+   function averageAge(petShelter) {
+    let totalAge = 0 
+    for(let i = 0; i < petShelter.length; i++) {
+      let pet = petShelter[i];
+      let petAge = pet.age;
+      totalAge = petAge + totalAge
+    }
+      let petAverage = totalAge/petShelter.length
+      console.log(petAverage)
 
+   }
+  
+    // Calculate the average age of pets in the shelter by calling the previous function
+   averageAge(petShelter)
 
 
   });
